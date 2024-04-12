@@ -9,24 +9,24 @@ import { FormsModule } from '@angular/forms'
 
 //components
 import { ListComponent } from './product/list.component';
-import { CreateComponent } from './product/create.component';
-import { UpdateComponent } from './product/update.component';
 import { MenuComponent } from './menu/menu.component';
+import { UsersComponent } from './users/users.component';
+import { ContactComponent } from './contact/contact.component';
 
 //External
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ToastrModule } from 'ngx-toastr';
-import { UsersComponent } from './users/users.component';
+import { FeaturedContentComponent } from './featured-content/featured-content.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    CreateComponent,
-    UpdateComponent,
     MenuComponent,
-    UsersComponent
+    UsersComponent,
+    ContactComponent,
+    FeaturedContentComponent
   ],
   imports: [
     BrowserModule,

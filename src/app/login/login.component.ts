@@ -65,10 +65,21 @@ export class LoginComponent {
       return false;
     }
 
-    const localUser = localStorage.getItem('usuarios');
+    /* const localUser = localStorage.getItem('usuarios');
     const users = localUser ? JSON.parse(localUser) : [];
     users.push(this.signUpObj);
-    localStorage.setItem('usuarios', JSON.stringify(users));
+    localStorage.setItem('usuarios', JSON.stringify(users)); */
+
+    const localUser = localStorage.getItem('usuarios');
+    if(localUser != null) {
+      const users =  JSON.parse(localUser);
+      users.push(this.signUpObj);
+      localStorage.setItem('usuarios', JSON.stringify(users))
+    } else {
+      const users = [];
+      users.push(this.signUpObj);
+      localStorage.setItem('usuarios', JSON.stringify(users))
+    }
 
     Swal.fire({
       title: 'Registro exitoso!',

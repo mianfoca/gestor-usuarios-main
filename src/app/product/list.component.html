@@ -31,8 +31,8 @@
                       <td>prueba.com</td>
                       <td>administrador</td>
                       <td>Centro</td>
-                      <td><button class="btn btn-primary" routerLink="/detail"><i class="fa-solid fa-eye"></i></button></td>
-                      <td><button class="btn btn-warning" routerLink="/update"><i class="fa-solid fa-pencil"></i></button></td>
+                      <td><button class="btn btn-primary" routerLink="/list"><i class="fa-solid fa-eye"></i></button></td>
+                      <td><button class="btn btn-warning" routerLink="/list"><i class="fa-solid fa-pencil"></i></button></td>
                       <td><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></td>
                     </tr>
                   </tbody>
@@ -40,11 +40,7 @@
             </div>
         </div>
         <div class="col-md-3 border">
-            <div class="destacado">
-                <!-- Contenido destacado -->
-                <h3>Contenido Destacado</h3>
-                <p>Este es un contenido destacado en la barra lateral derecha.</p>
-            </div>
+          <app-featured-content></app-featured-content>
         </div>
     </div>
 </div>
