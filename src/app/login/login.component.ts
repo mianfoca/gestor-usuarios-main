@@ -87,7 +87,7 @@ export class LoginComponent {
       showConfirmButton: false,
       timer: 1500
     }).then(() => {
-      this.router.navigateByUrl('/list');
+      this.router.navigateByUrl('/home');
     });
 
     return true; // Añadimos un valor de retorno aquí
@@ -112,7 +112,7 @@ export class LoginComponent {
       const isUserPresent = users.find((user: SignUpModel) => user.email === this.loginObj.email && user.password === this.loginObj.password);
       if (isUserPresent) {
         localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
-        this.router.navigateByUrl('/list');
+        this.router.navigateByUrl('/home');
         return true;
       } else {
         Swal.fire({

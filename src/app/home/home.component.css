@@ -1,0 +1,68 @@
+.section {
+    padding: 2rem 9%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: .2rem solid #407BFF;
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+    color: #407BFF;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn span {
+    padding: .7rem 1rem;
+    border-radius: .5rem;
+    background: #407BFF;
+    color: #FFF;
+    margin-left: .5rem;
+}
+
+.btn:hover {
+    background: #407BFF;
+    color: #FFF;
+}
+
+.btn:hover span{
+    color: #407BFF;
+    background: #FFF;
+    margin-left: 1rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.home .image {
+    flex: 1 1 45rem;
+}
+
+.home .image img {
+    width: 90%;
+}
+
+.home .content {
+    flex: 1 1 45rem;
+}
+
+.home .content h3 {
+    font-size: 4.5rem;
+    color: #444;
+    line-height: 1.8;
+    text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+}
+
+.home .content p {
+    font-size: 1.7rem;
+    color: #777;
+    line-height: 1.8;
+    padding: 1rem 0;
+}

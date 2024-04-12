@@ -17,7 +17,7 @@ import { ContactComponent } from './contact/contact.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ToastrModule } from 'ngx-toastr';
 import { FeaturedContentComponent } from './featured-content/featured-content.component';
-
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { FeaturedContentComponent } from './featured-content/featured-content.co
     MenuComponent,
     UsersComponent,
     ContactComponent,
-    FeaturedContentComponent
+    FeaturedContentComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
