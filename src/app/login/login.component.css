@@ -6,11 +6,15 @@ body, html {
 
 .login-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    max-width: 80%; /* Por ejemplo, establece el ancho máximo que desees */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
 }
 
-.container span{
-    font-size: 12px;
+.container span {
+    font-size: 5px;
 }
 
 .form-container {
@@ -18,15 +22,12 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f1f1f1; /* Color de fondo del formulario */
+    margin-top: 20px;
+    padding: 0 20px;
 }
 
 .image-container {
-    flex: 2.5; /* Aumentamos el tamaño del contenedor de la imagen */
-    background-color: #333; /* Color de fondo de la imagen */
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    flex: 2.5;
 }
 
 .image-container img {
@@ -64,7 +65,7 @@ body, html {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .form-group label {
@@ -75,7 +76,7 @@ body, html {
 
 .form-group input {
     width: 100%;
-    padding: 12px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
@@ -88,7 +89,7 @@ body, html {
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 5px;
     border: none;
     border-radius: 5px;
     background-color: #512da8; /* Color de fondo del botón */
