@@ -1,4 +1,8 @@
 <div class="login-container" id="container">
+    <div class="image-container">
+        <!-- Aquí puedes colocar tu imagen -->
+        <img [src]="imagenUrl" alt="Imagen de fondo">
+    </div>
     <div class="form-container">
         <form class="login-form" *ngIf="isLoginFormVisible">
             <h2>Iniciar Sesion</h2>
@@ -44,10 +48,6 @@
                 <a type="button" class="text-decoration-none text-info fw-semibold" (click)="toggleForms()">Iniciar Sesión</a>
             </div>
         </form>
-    </div>
-    <div class="image-container">
-        <!-- Aquí puedes colocar tu imagen -->
-        <img [src]="imagenUrl" alt="Imagen de fondo">
     </div>
 </div>
 
