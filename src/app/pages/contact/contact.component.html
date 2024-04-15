@@ -1,46 +1,44 @@
-<app-menu></app-menu>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-9">
-            <nav class="navbar navbar-light">
-                <div class="container-fluid d-flex justify-content-between align-items-center">
-                    <span class="navbar-brand mb-0 h1">Contacto</span>
-                </div>
-            </nav>
+<main class="content">
+    <app-header></app-header>
+    <app-menu></app-menu>
+  
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-lg-8 col-md-12 left-box">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid d-flex justify-content-between align-items-center">
+                        <span class="navbar-brand mb-0 h1">Contacto</span>
+                    </div>
+                </nav>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <img [src]="imagenUrl" alt="Imagen de contacto" class="img-fluid">
+                    </div>
+                    <div class="col-md-6">
+                        <form>
+                            <h2>Contacto</h2>
+                            <div class="input-group">
+                                <label for="name">Nombres</label>
+                                <input type="text" name="name" id="name" placeholder="Nombre">
             
-            <div class="row">
-                <div class="col-md-6">
-                    <img [src]="imagenUrl" alt="Imagen de contacto" class="img-fluid">
-                </div>
-                <div class="col-md-6">
-                    <form>
-                        <h2>Contacto</h2>
-                        <div class="input-group">
-                            <label for="name">Nombres</label>
-                            <input type="text" name="name" id="name" placeholder="Nombre">
-
-                            <label for="phone">Telefono</label>
-                            <input type="tel" name="phone" id="phone" placeholder="Telefono">
-
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email">
-
-                            <label for="message">Mensaje</label>
-                            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
-
-                            <input class="btn" type="submit" value="Enviar">
-                        </div>
-                    </form>
+                                <label for="phone">Telefono</label>
+                                <input type="tel" name="phone" id="phone" placeholder="Telefono">
+            
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Email">
+            
+                                <label for="message">Mensaje</label>
+                                <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+            
+                                <input class="btn" type="submit" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 border">
-          <app-featured-content></app-featured-content>
-        </div>
+        </div>    
     </div>
-</div>
-
-<footer class="footer">
-    <!-- Información adicional -->
-</footer>
+  
+    <app-footer></app-footer>
+</main>
