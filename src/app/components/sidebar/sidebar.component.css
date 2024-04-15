@@ -181,3 +181,75 @@
 .single_post2 .content .text {
     font-size: 15px
 }
+
+.right-box .categories-clouds li {
+    display: inline-block;
+    margin-bottom: 5px
+}
+
+.right-box .categories-clouds li a {
+    display: block;
+    border: 1px solid;
+    padding: 6px 10px;
+    border-radius: 3px
+}
+
+.right-box .instagram-plugin {
+    overflow: hidden
+}
+
+.right-box .instagram-plugin li {
+    float: left;
+    overflow: hidden;
+    border: 1px solid #fff
+}
+
+.comment-reply li {
+    margin-bottom: 15px
+}
+
+.comment-reply li:last-child {
+    margin-bottom: none
+}
+
+.comment-reply li h5 {
+    font-size: 18px
+}
+
+.comment-reply li p {
+    margin-bottom: 0px;
+    font-size: 15px;
+    color: #777
+}
+
+.comment-reply .list-inline li {
+    display: inline-block;
+    margin: 0;
+    padding-right: 20px
+}
+
+.comment-reply .list-inline li a {
+    font-size: 13px
+}
+
+@media (max-width: 640px) {
+    .blog-page .left-box .single-comment-box>ul>li {
+        padding: 25px 0
+    }
+    .blog-page .left-box .single-comment-box ul li .icon-box {
+        display: inline-block
+    }
+    .blog-page .left-box .single-comment-box ul li .text-box {
+        display: block;
+        padding-left: 0;
+        margin-top: 10px
+    }
+    .blog-page .single_post .footer .stats {
+        float: none;
+        margin-top: 10px
+    }
+    .blog-page .single_post .body,
+    .blog-page .single_post .footer {
+        padding: 30px
+    }
+}

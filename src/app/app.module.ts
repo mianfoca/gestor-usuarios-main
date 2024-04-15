@@ -16,8 +16,12 @@ import { ContactComponent } from './pages/contact/contact.component';
 //External
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ToastrModule } from 'ngx-toastr';
-import { FeaturedContentComponent } from './components/featured-content/featured-content.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HeaderBrandComponent } from './components/header-brand/header-brand.component';
+import { HeaderProfileComponent } from './components/header-profile/header-profile.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -26,8 +30,12 @@ import { HomeComponent } from './pages/home/home.component';
     MenuComponent,
     UsersComponent,
     ContactComponent,
-    FeaturedContentComponent,
     HomeComponent,
+    HeaderComponent,
+    HeaderBrandComponent,
+    HeaderProfileComponent,
+    FooterComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
