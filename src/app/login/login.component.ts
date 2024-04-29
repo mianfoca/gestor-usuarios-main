@@ -72,21 +72,7 @@ export class LoginComponent {
     localStorage.setItem('usuarios', JSON.stringify(users)); */
 
     const localUser = localStorage.getItem('usuarios');
-    this.http.post<any>('/usuarios', this.signUpObj).subscribe(
-      (response) => {
-        // Registro exitoso
-        Swal.fire({
-          title: 'Registro exitoso!',
-          icon: 'success',
-          showConfirmButton: false,
-          timer: 1500
-        }).then(() => {
-          this.router.navigateByUrl('/home');
-        });
-
-      }
-    )
-    /* if(localUser != null) {
+    if(localUser != null) {
       const users =  JSON.parse(localUser);
       users.push(this.signUpObj);
       localStorage.setItem('usuarios', JSON.stringify(users))
@@ -94,9 +80,16 @@ export class LoginComponent {
       const users = [];
       users.push(this.signUpObj);
       localStorage.setItem('usuarios', JSON.stringify(users))
-    } */
+    }
 
-    
+    Swal.fire({
+      title: 'Registro exitoso!',
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 1500
+    }).then(() => {
+      this.router.navigateByUrl('/home');
+    });
 
     return true; // Añadimos un valor de retorno aquí
   }
@@ -114,27 +107,8 @@ export class LoginComponent {
       return false;
     }
 
-    this.http.get<any[]>('/usuarios').subscribe(
-      (localUsers) => {
-        const isUserPresent = localUsers.find((user: SignUpModel) => user.email === this.loginObj.email && user.password === this.loginObj.password);
-        if (isUserPresent) {
-          // Inicio de sesión exitoso
-          localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
-          this.router.navigateByUrl('/home');
-        } else {
-          // Usuario no encontrado
-
-          Swal.fire({
-            title: 'Este usuario no está registrado!',
-            icon: 'warning',
-            showConfirmButton: false,
-            timer: 1500
-          });
-        }
-      }
-    );
-
-    /* if (localUsers) {
+    const localUsers = localStorage.getItem('usuarios');
+    if (localUsers) {
       const users = JSON.parse(localUsers);
       const isUserPresent = users.find((user: SignUpModel) => user.email === this.loginObj.email && user.password === this.loginObj.password);
       if (isUserPresent) {
@@ -150,9 +124,9 @@ export class LoginComponent {
         });
         return false;
       }
-    } */
+    }
 
-    return true;
+    return false;
   }
 }
 
