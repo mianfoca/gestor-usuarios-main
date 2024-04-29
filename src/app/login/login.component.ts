@@ -72,7 +72,7 @@ export class LoginComponent {
     localStorage.setItem('usuarios', JSON.stringify(users)); */
 
     const localUser = localStorage.getItem('usuarios');
-    this.http.post<any>('http://localhost:3000/usuarios', this.signUpObj).subscribe(
+    this.http.post<any>('/usuarios', this.signUpObj).subscribe(
       (response) => {
         // Registro exitoso
         Swal.fire({
