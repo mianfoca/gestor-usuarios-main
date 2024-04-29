@@ -114,7 +114,7 @@ export class LoginComponent {
       return false;
     }
 
-    this.http.get<any[]>('http://localhost:3000/usuarios').subscribe(
+    this.http.get<any[]>('/usuarios').subscribe(
       (localUsers) => {
         const isUserPresent = localUsers.find((user: SignUpModel) => user.email === this.loginObj.email && user.password === this.loginObj.password);
         if (isUserPresent) {
