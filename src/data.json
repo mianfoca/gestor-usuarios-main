@@ -1,0 +1,16 @@
+{
+  "usuarios": [
+    {
+      "id": "8f7b",
+      "email": "smurcia0820@gmail.com",
+      "name": "Juan Sebastian",
+      "lastname": "Murcia Zuñiga",
+      "password": "123456",
+      "confirmPassword": "123456"
+    }
+  ],
+
+  "servicios": [
+    
+  ]
+}
