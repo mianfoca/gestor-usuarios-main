@@ -8,16 +8,16 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms'
 
 //components
-import { ListComponent } from './product/list.component';
-import { MenuComponent } from './menu/menu.component';
-import { UsersComponent } from './users/users.component';
-import { ContactComponent } from './contact/contact.component';
+import { ListComponent } from './pages/product/list.component';
+import { MenuComponent } from './pages/menu/menu.component';
+import { UsersComponent } from './pages/users/users.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 //External
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ToastrModule } from 'ngx-toastr';
-import { FeaturedContentComponent } from './featured-content/featured-content.component';
-import { HomeComponent } from './home/home.component';
+import { FeaturedContentComponent } from './pages/featured-content/featured-content.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
