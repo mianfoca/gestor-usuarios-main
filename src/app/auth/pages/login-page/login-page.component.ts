@@ -30,7 +30,8 @@ export class LoginPageComponent {
         showConfirmButton: false,
         timer: 1500
       });
-      return false;
+
+      return;
     }
 
     const user = this.authService.login(this.loginObj.email, this.loginObj.password);
@@ -43,10 +44,9 @@ export class LoginPageComponent {
         timer: 1500
       });
 
-      return false;
+      return;
     }
 
-    this.router.navigateByUrl('/home');
-    return true;
+    this.router.navigate(['./dashboard/home']);
   }
 }

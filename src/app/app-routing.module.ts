@@ -1,10 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ListComponent } from './pages/product/list.component';
-import { UsersComponent } from './pages/users/users.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
 
 import { AuthGuard } from './auth/guards/auth.guard';
 import { PublicGuard } from './auth/guards/public.guard';
@@ -16,10 +12,12 @@ const routes: Routes = [
     canActivate: [ PublicGuard ],
     canMatch: [ PublicGuard ]
   },
-  {path: 'home', component: HomeComponent},
-  {path: 'list', component: ListComponent},
-  {path: 'profile', component: UsersComponent},
-  {path: 'contact', component: ContactComponent},
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardModule ),
+    canActivate: [ AuthGuard ],
+    canMatch: [ AuthGuard ]
+  },
   {
     path:'',
     redirectTo : 'auth',

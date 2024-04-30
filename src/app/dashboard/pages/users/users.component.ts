@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  selector: 'app-users',
+  templateUrl: './users.component.html',
 })
-export class MenuComponent {
+export class UsersComponent {
 
   loggedUser: any;
   constructor(private router: Router) {
@@ -14,11 +13,6 @@ export class MenuComponent {
     if(localUser != null) {
       this.loggedUser = JSON.parse(localUser);
     }
-  }
-
-  onLogoff() {
-    localStorage.removeItem('loggedUser');
-    this.router.navigateByUrl('/login')
   }
 
 }
