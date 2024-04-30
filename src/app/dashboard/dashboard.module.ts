@@ -7,12 +7,13 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 // Components
 import { MenuComponent } from './components/menu/menu.component';
 import { FeaturedContentComponent } from './components/featured-content/featured-content.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 // Pages
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/product/list.component';
-// import { ServicesComponent } from './pages/services/services.component';
+import { ServicesComponent } from './pages/services/services.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
@@ -20,11 +21,12 @@ import { ContactComponent } from './pages/contact/contact.component';
     declarations: [
       MenuComponent,
       FeaturedContentComponent,
+      FooterComponent,
 
       LayoutPageComponent,
       HomeComponent,
       ListComponent,
-      // ServicesComponent,
+      ServicesComponent,
       UsersComponent,
       ContactComponent
     ],
