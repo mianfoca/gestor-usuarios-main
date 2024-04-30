@@ -1,29 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListComponent } from './pages/products/list/list.component';
-import { UsersComponent } from './pages/users/users.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { HomeComponent } from './pages/home/home.component';
-
-//Login
-import { LoginComponent } from './pages/login/login.component';
-
+import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
-  {path: 'list', component: ListComponent},
-  {path: 'profile', component: UsersComponent},
-  {path: 'contact', component: ContactComponent},
   {
-    path:'',
-    redirectTo : 'login',
-    pathMatch:'full'
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule ),
+    // canActivate: [ PublicGuard ],
+    // canMatch: [ PublicGuard ]
+  },
+  // {
+  //   path: 'heroes',
+  //   loadChildren: () => import('./heroes/heroes.module').then( m => m.HeroesModule ),
+  //   canActivate: [ AuthGuard ],
+  //   canMatch: [ AuthGuard ]
+  // },
+  {
+    path: '404',
+    component: Error404PageComponent,
   },
   {
-    path:'login',
-    component: LoginComponent
+    path: '',
+    redirectTo: 'heroes',
+    pathMatch: 'full'
   },
+  {
+    path: '**',
+    redirectTo: '404',
+  }
 ];
 
 @NgModule({
