@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 
 import Swal from 'sweetalert2';
 
@@ -23,7 +22,7 @@ export class LoginComponent {
   signUpObj: SignUpModel = new SignUpModel();
   loginObj: LoginModel = new LoginModel();
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router) {}
   
   // Validar si los campos del formulario de registro están completos
   areSignUpFieldsValid(): boolean {
